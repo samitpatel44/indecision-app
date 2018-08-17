@@ -28,7 +28,7 @@ class Counter extends React.Component {
     handleReset () {
        this.setState(() => {
            return {
-               count: 0
+               count: props.count 
            };
        });
         // console.log('handleReset');
@@ -45,6 +45,9 @@ class Counter extends React.Component {
     }
 }
 
+Counter.defaultProps = {
+    count : 0
+}
 
 ReactDOM.render(<Counter />, document.getElementById('app'));
 
